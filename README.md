@@ -1,4 +1,3 @@
-# echarts-project
-test project
-
-这里是共享仓库
+要是觉得不错的话给个star吧！！！
+一个开源的模板。
+作者:Yh

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- rel 调用外部样式表 -->
+    <link rel="stylesheet" href="CSS/index.css">
+    <title>数据可视化test</title>
+</head>
+
+<body>
+    <header>
+        <h1>ECharts数据可视化
+            <div class="showtime"></div>
+        </h1>
+    </header>
+    <div class="mainbox">
+        <div class="column">
+
+            <div class="panel">
+                <div class="panel-bar">
+                    <h2>就业测试数据</h2>
+                    <div class="chart">
+                        
+                    </div>
+                </div>
+                <div class="panel-footer"></div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-bar2">
+                    <h2>活跃度测试数据</h2>
+                    <div class="chart">
+                        
+                    </div>
+                </div>
+                <div class="panel-footer"></div>
+            </div>
+            
+            <div class="panel">
+                <div class="panel-bar3">
+                    <h2>商业推广数据占比</h2>
+                    <div class="chart">
+                        
+                    </div>
+                </div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+
+        <!-- 模块(中)-->
+        <div class="column">
+            <div class="no">
+                <div class="no-hd">
+                    <ul>
+                        <li>1254841</li>
+                        <li>1510000</li>
+                    </ul>
+                </div>
+                <div class="no-bd">
+                    <ul>
+                        <li>需求人数</li>
+                        <li>市场人数</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 地图模块 -->
+            <div class="map">
+                <div class="chart">
+                </div>
+                <div class="global">
+                </div>
+                <div class="action">   
+                </div>
+                <div class="action2">  
+                </div>
+            </div>
+        </div>
+
+
+        <div class="column">
+            <div class="panel">
+                <div class="panel-bar4">
+                    <h2>SETAM在线游玩数</h2>
+                    <div class="chart">
+                        
+                    </div>
+                </div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel">
+                <div class="panel-bar5">
+                    <h2>人员变动测试数据</h2>
+                    <div class="chart">
+                        
+                    </div>
+                </div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel">
+                <div class="panel-bar6">
+                    <h2>杭州地铁线</h2>
+                    <div class="chart">
+                        
+                    </div>
+                </div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/flexible.js"></script>
+<script src="./js/echarts.min.js"></script>
+<script src="./js/china.js"></script>
+<script src="./js/index.js"></script>
+
+
+<script>
+    var date = null;
+    date = setTimeout(time,1000);
+    function getZero(num){
+        if(num<10){
+            return '0'+num;
+        }
+        return num;
+    }
+    function time(){
+        clearTimeout(date);
+        dt = new Date();
+        var y = dt.getFullYear();
+        var m = dt.getMonth()+1;
+        var d = dt.getDate();
+        var h = dt.getHours();
+        var m = dt.getMinutes();
+        var s = dt.getSeconds();
+        document.querySelector(".showtime").innerHTML = "当前时间："+y+'年'+m+"月"+d+'日 '+h+":"+getZero(m)+':'+getZero(s);
+        date = setTimeout(time,1000);
+    }
+</script>
